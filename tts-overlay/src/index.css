@@ -1,0 +1,52 @@
+body {
+  background-color: transparent;
+}
+.animationContainer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -35vh;
+  transition: all 1s ease;
+}
+
+.animationContainer.enabled {
+  margin-top: -7vh;
+  transition: all 1s ease;
+}
+
+.title {
+  font-family: 'Gabarito', sans-serif;
+  font-size: 8vh;
+  color: #F75056;
+  text-shadow: rgb(44, 44, 44) 1px 0 3px;
+}
+
+.description {
+  font-family: 'Gabarito', sans-serif;
+  font-size: 4vh;
+  color: white;
+  margin-top: -7vh;
+  text-shadow: rgb(44, 44, 44) 1px 0 5px;
+}
+
+.buttonContainer {
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+}
+
+.buttonContainer.enabled {
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+}
+
+.emotePicture {
+  width: 5vh;
+}

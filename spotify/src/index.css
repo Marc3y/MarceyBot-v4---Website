@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+   user-drag: none;
+}
+
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.buttonPremium {
+  border-radius: 12px;
+  background: #ffa60062;
+}
+
+.spotifyLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.spotifyLogo {
+  align-self: center;
+  font-size: 400px;
+  transition: all 0.3s ease;
+}
+
+.spotifyLogo:hover {
+  border-radius: 50%;
+  color: rgb(238, 238, 238);
+  transition: all 0.3s ease;
+}
+
+.spotifyButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotifyText {
+  display: flex;
+  margin-top: 75px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.spotifyNotConnectedText {
+  display: flex;
+  margin-top: 55px;
+  margin-left: 5px;
+  color: rgb(255, 71, 71);
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.spotifyNotConnectedText:hover {
+  color: red;
+  transition: all 0.2s ease;
+}
+
+.spotifyConnectedText {
+  display: flex;
+  margin-top: 55px;
+  margin-left: 5px;
+  color: rgb(0, 233, 0);
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.spotifyConnectedText:hover {
+  color: rgb(14, 255, 14);
+  transition: all 0.2s ease;
+}
+
+.connectButton {
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  margin-top: 200px;
+  height: 100%;
+}
+
+.whiteButton {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  width: 300px;
+  height: 50px;
+  border-radius: 7.5px;
+  transition: all 0.2s ease;
+}
+
+.whiteButton:hover {
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}

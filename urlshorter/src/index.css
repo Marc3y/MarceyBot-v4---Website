@@ -1,0 +1,86 @@
+body {
+  background-color: #212121;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  color:  white;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 5vh;
+}
+
+.inputField {
+  font-family: 'Gabarito', sans-serif;
+  width: 70vh;
+  height: 5vh;
+  font-size: 2vh;
+  border-radius: 0.75vh;
+  outline: none;
+  border: none;
+  padding-left: 0.8vh;
+  padding-right: 0.8vh;
+  background-color: #494949;
+  color: white;
+  margin-top: 20vh;
+  transition: all 0.2s ease;
+}
+
+.idSpan {
+  font-family: 'Gabarito', sans-serif;
+  color: white;
+  width: 60vh;
+  height: 3vh;
+  font-size: 2vh;
+  margin-top: 2vh;
+  transition: all 0.2s ease;
+}
+
+.idSpan input {
+  font-family: 'Gabarito', sans-serif;
+  width: 10vh;
+  height: 2.5vh;
+  text-align: center;
+  font-size: 2vh;
+  border-radius: 0.75vh;
+  outline: none;
+  border: none;
+  padding-left: 0.8vh;
+  padding-right: 0.8vh;
+  background-color: #494949;
+  color: white;
+  margin-top: 0.2vh;
+  margin-left: 0.3vh;
+  transition: all 0.2s ease;
+}
+
+.inputFieldDefault {
+  position: absolute;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 2vh;
+  border-radius: 0.75vh;
+  outline: none;
+  border: none;
+  padding-left: 0.8vh;
+  padding-right: 0.8vh;
+  color: rgba(177, 177, 177, 0.993);
+  margin-top: 35.9vh;
+  margin-left: -54vh;
+  transition: all 0.2s ease;
+}
+
+.inputField:hover {
+  background-color: #555555;
+  transition: all 0.2s ease;
+}
+
+.inputField:focus {
+  background-color: #555555;
+  transition: all 0.2s ease;
+}

@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+   user-drag: none;
+}
+
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.spotifyLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+
+.cleanButton {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  width: 300px;
+  height: 50px;
+  border-radius: 7.5px;
+  transition: all 0.2s ease;
+}
+
+.cleanButton:hover {
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.whiteButton {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  width: 300px;
+  height: 50px;
+  border-radius: 7.5px;
+  transition: all 0.2s ease;
+}
+
+.whiteButton:hover {
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.container {
+  display: flex;
+  border-radius: 7.5px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10%;
+}
+
+.emailContainer {
+  background-color: #212121;
+  width: 35%;
+  height: 60px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.emailContainer:hover {
+  background-color: #272727;
+  transition: all 0.3s ease;
+}
+
+.emailContainer:hover .emailField {
+  background-color: #272727;
+  transition: all 0.3s ease;
+}
+
+.emailField {
+  align-self: center;
+  width: 96.5%;
+  color: white;
+  opacity: 0.4;
+  height: 50px;
+  margin-top: 3.5px;
+  margin-left: 10px;;
+  font-size: 30px;
+  background-color: #212121;
+  outline: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.emailField:hover {
+  background-color: #272727;
+  transition: all 0.3s ease;
+}
+
+.textContainer {
+  display: grid;
+  border-radius: 7.5px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 15%;
+}
+
+.spotifyEmailTextA {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+.spotifyEmailTextB {
+  font-size: 25px;
+  text-align: center;
+}

@@ -1,0 +1,231 @@
+.stat-box {
+  width: 22.2vh; 
+  align-items: center;
+  height: 17.5vh; 
+  background-color: #11101d;
+  border-radius: 2vh;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+
+.stat-box .stat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+  margin-top: 1.75vh;
+}
+
+.stat-box .stat-name {
+  text-align: center;
+  font-family: "area-extended", sans-serif;
+  font-weight: 700;
+  font-size: 1.5vh;
+}
+
+.stat-box .stat-time {
+  text-align: center;
+  color: #bababa;
+  margin-top: 0.3vh;
+  font-size: 1.1vh;
+}
+
+.stat-box .stat-value {
+  margin-top: 0.75vh;
+  font-size: 2vh;
+  text-align: center;
+  color: #fcbe42;
+  transition: all 0.5s ease;
+}
+
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.box {
+  width: 43vh; 
+  height: 55vh;
+  opacity: 80%;
+  border-radius: 2.5vh;
+  margin-top: 70px;
+  margin-right: 70px;
+  text-align: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.liveStats {
+  width: 100vh;
+  height: 55vh;
+  border-radius: 2.5vh;
+  margin-top: 70px;
+  margin-right: 70px;
+  margin-left: 14px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.box:hover, .liveStats:hover {
+  background-color: #111111;
+  transition: all 0.2s ease;
+}
+
+#quick-box:hover input {
+  background-color: #201c3f;
+  transition: all 0.1s ease;
+}
+
+#quick-box input {
+  background-color: #19172b;
+  margin-top: 100px;
+  border: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 25px;
+  margin-top: 10px;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+  color: white;
+  outline: none;
+  text-indent: 10px;
+  transition: all 1s ease;
+}
+
+
+
+#quick-box input:focus {
+  outline: white;
+  border: 1px solid #ccc;
+  transition: all 1s ease;
+}
+
+#quick-box p {
+  margin-top: 50px;
+  font-family: "area-extended", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+.maintitle {
+  font-size: 25px;
+  font-family: "area-extended", sans-serif;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+
+#bot-box .dateContainer {
+  margin-top: 80px;
+}
+
+
+.botjoin {
+  margin-top: 155px;
+}
+
+
+.dateJoinedValue {
+  margin-top: 15px;
+  color: #ff0019;
+  font-family: "area-extended", sans-serif;
+  font-weight: 700;
+}
+
+.saveButton {
+  background-color: #211e30;
+  border-radius: 15px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 58px;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+
+.saveButton:hover {
+  background-color: #272438;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+  box-shadow: #9d9ba8 0px 0px 50px -20px;
+  transition: all 0.4s ease;
+}
+
+#quick-box {
+  font-size: 25px;
+}
+
+#quick-box .title {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 50px;
+  font-size: 15px;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+}
+
+
+#quick-box .game {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 50px;
+  font-size: 15px;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+}
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 35px;
+}
+
+.cleanButton {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  width: 300px;
+  height: 50px;
+  border-radius: 7.5px;
+  transition: all 0.2s ease;
+}
+
+.cleanButton:hover {
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stat-box:hover {
+  background-color: #1a1a1a;
+  transition: all 0.2s ease;
+}
+
+.stat-box:hover .stat-value {
+  text-shadow: #ff8800 0px 0px 5px,
+   #ff8800 0px 0px 10px,
+   #ff8800 0px 0px 15px,
+   #ff8800 0px 0px 20px,
+   #ff8800 0px 0px 30px,
+   #ff8800 0px 0px 40px,
+   #ff8800 0px 0px 50px,
+   #ff8800 0px 0px 75px;
+   transition: all 0.5s ease;
+}

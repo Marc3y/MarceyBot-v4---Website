@@ -1,0 +1,878 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 300%;
+  margin-top: 3%;
+  font-family: "area-extended", sans-serif;
+  font-weight: 700;
+}
+
+.commandView {
+  display: flex;
+  width: 80%;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 4%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.sort {
+  margin-left: 0.5%;
+  background-color: #121212;
+  border-radius: 10px;
+  width: 16%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sort .select-btn {
+  display: flex;
+  height: 100%;
+  padding: 10px;
+  font-size: 15px auto;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.select-btn i {
+  font-size: 25px auto;
+  transition: 0.3s;
+}
+.sort.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+.sort .sortOptions {
+  padding: 5%;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #121212;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.sort.active .sortOptions {
+  display: block;
+  opacity: 1;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.sort:hover {
+  background-color: #202020;
+  transition: all 0.3s ease;
+}
+
+
+.sortOptions .sortOption {
+  cursor: pointer;
+  align-items: center;
+  line-height: 50px;
+  font-size: 20px auto;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sortOptions .sortOption:hover {
+  background-color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.filter {
+  background-color: #121212;
+  border-radius: 10px;
+  width: 16%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.filter .select-btn {
+  display: flex;
+  height: 100%;
+  padding: 10px;
+  font-size: 15px auto;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.select-btn i {
+  font-size: 25px auto;
+  transition: 0.3s;
+}
+.filter.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+.filter .options {
+  position: relative;
+  padding: 5%;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #121212;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.filter.active .options {
+  display: block;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.filter:hover {
+  background-color: #1d1d1d;
+  transition: all 0.3s ease;
+}
+
+
+.options .option {
+  cursor: pointer;
+  align-items: center;
+  line-height: 50px;
+  font-size: 20px auto;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.options .option:hover {
+  background-color: #1b1b1b;
+  transition: all 0.3s ease;
+}
+
+.searchBar {
+  display: flex;
+  background-color: #121212;
+  border-radius: 8px;
+  width: 67%;
+  height: 100%;
+  margin-left: 0.5%;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.searchBar:hover {
+  display: flex;
+  background-color: #202020;
+  border-radius: 8px;
+  width: 67%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.searchBar i {
+  display: flex;
+  padding: 12px;
+}
+
+.searchBar input {
+  display: flex;
+  width: 92%;
+  height: 80%;
+  border-radius: 8px;
+  background-color: #121212;
+  transition: all 0.5s ease;
+  outline: none;
+  text-indent: 10px;
+}
+
+.searchBar input:focus {
+  background-color: #121212;
+  transition: all 0.5s ease;
+}
+
+.searchBar input:hover {
+  background-color: #202020;
+  transition: all 0.3s ease;
+}
+
+.commandList {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.command {
+  position: relative;
+  background-color: #121212;
+  width: 80%;
+  height: 70px;
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 2%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.command:hover {
+  background-color: #1b1b1b;
+  transition: all 0.3s ease;
+}
+
+.command.active {
+  margin-bottom: 400px;
+}
+
+.command .commandArrow {
+  transition: all 0.3s ease;
+}
+
+.command.active .commandArrow {
+  transform: rotate(-180deg);
+  transition: all 0.3s ease;
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: 25%;
+  left: 2%;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3b393f;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  left: 4px;
+  transform: translateX(0);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #5e5edf;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #6a5899;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+}
+
+.commandName {
+  position: absolute;
+  left: 10%;
+  top: 22.5%;
+  font-size: 25px;
+  color: white;
+  font-family: "area-extended", sans-serif;
+  font-weight: 700;
+}
+
+.commandOutput {
+  position: absolute;
+  left: 30%;
+  top: 32%;
+  font-size: 100%;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+}
+
+.commandRole {
+  position: absolute;
+  left: 87.5%;
+  top: 28%;
+  font-size: 20px;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+}
+
+.commandArrow {
+  position: absolute;
+  left: 96%;
+  top: 28.5%;
+  font-size: 30px;
+}
+
+.advancedCommand {
+  opacity: 0;
+  border-radius: 12px;
+  position: absolute;
+  background-color: #121212;
+  top: 100%;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 1%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.advancedCommand.active {
+  border-radius: 12px;
+  position: absolute;
+  background-color: #121212;
+  top: 100%;
+  width: 100%;
+  height: 500%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+
+.commandContent {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.vertical-line {
+  border-left: 2px solid gray;
+  height: 330px;
+  margin-left: 276px;
+}
+
+.buttonPremium {
+  border-radius: 12px;
+  background: #ffa60062;
+}
+
+
+.availabilityOption {
+  display: flex;
+  position: absolute;
+  gap: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.availabilityOption input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.availabilityOption input:checked ~ .checkmark {
+  background-color: #5230ce;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.availabilityOption .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.availabilityOption input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #4a4a52;
+  border-radius: 50%;
+}
+
+#offline {
+  margin-top: 50px;
+}
+
+#online {
+  margin-top: 100px;
+}
+
+#hideFromPublic {
+  margin-top: 175px;
+}
+
+.commandAvailabilityText {
+  display: flex;
+  position: absolute;
+  color: rgb(224, 224, 224);
+  margin-left: 10px;
+}
+
+.availabilityOptionText {
+  font-size: 17.5px;
+  margin-left: 40px;
+}
+
+.text-box {
+  resize: none;
+  overflow: hidden;
+  position: absolute;
+  background-color: #292929;
+  border-radius: 7.5px;
+  outline: none;
+  white-space: pre-wrap;
+}
+
+.commandInputText {
+  position: absolute;
+  top: 10px;
+  left: 325px;
+}
+
+.commandInput {
+  display: flex;
+  top: 40px;
+  font-size: 25px;
+  width: 350px;
+  left: 325px;
+  text-indent: 10px;
+}
+
+.responseText {
+  position: absolute;
+  top: 90px;
+  left: 325px;
+}
+
+.responseInput {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 450px;
+  height: 190px;
+  top: 120px;
+  font-size: 20px;
+  left: 325px;
+}
+
+.responseContainer {
+  display: flex;
+  position: absolute;
+  top: 120px;
+  left: 325px;
+  width: 470px;
+  height: 210px;
+  border-radius: 7.5px;
+  background-color: #292929;;
+}
+
+.userCooldown {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  width: 180px;
+  height: 37.5px;
+  font-size: 20px;
+  text-align: center;
+  left: 700px;
+}
+
+.userCooldownText {
+  position: absolute;
+  top: 10px;
+  left: 702px;
+}
+
+.globalCooldown {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  width: 180px;
+  height: 37.5px;
+  font-size: 20px;
+  text-align: center;
+  left: 905px;
+}
+
+.globalCooldownText {
+  position: absolute;
+  top: 10px;
+  left: 907px;
+}
+
+.userLevelText {
+  position: absolute;
+  top: 10px;
+  left: 1127px;
+}
+
+.responseTypeText {
+  position: absolute;
+  top: 90px;
+  left: 1127px;
+}
+
+.responseTypeDropBtn {
+  position: absolute;
+  top: 120px;
+  left: 1125px;
+  height: 37px;
+  width: 175px;
+  text-align: center;
+  align-items: center;
+  border-radius: 7.5px;
+  background-color: #292929;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.responseTypeDropBtn:hover {
+  background-color: #303030;
+  transition: all 0.2s ease;
+}
+
+.responseType-content {
+  display: none;
+  position: absolute;
+  background-color: #292929;
+  border-radius: 12px;
+  min-width: 175px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 160px;
+  left: 1125px;
+}
+
+.responseType-content.active {
+  display: block;
+  position: absolute;
+  background-color: #292929;
+  border-radius: 12px;
+  min-width: 175px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 160px;
+  left: 1125px;
+}
+.responseType-content a {
+  color: white;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  border-radius: 12px;
+}
+.responseType-content a p {
+  position: relative;
+  top: 10px;
+}
+.responseType-content a:hover {
+  background-color: #2e2e2e;
+}
+
+.userLevelDropBtn {
+  position: absolute;
+  top: 40px;
+  left: 1125px;
+  height: 37px;
+  width: 175px;
+  text-align: center;
+  align-items: center;
+  border-radius: 7.5px;
+  background-color: #292929;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.userLevelDropBtn:hover {
+  background-color: #313131;
+  transition: all 0.2s ease;
+}
+
+.userLevel-content {
+  display: none;
+  position: absolute;
+  background-color: #292929;
+  border-radius: 12px;
+  min-width: 175px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 80px;
+  left: 1125px;
+}
+.userLevel-content.active {
+  display: block;
+  position: absolute;
+  background-color: #292929;
+  border-radius: 12px;
+  min-width: 175px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 80px;
+  left: 1125px;
+}
+.userLevel-content a {
+  color: white;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  border-radius: 12px;
+}
+.userLevel-content a p {
+  position: relative;
+  top: 10px;
+}
+.userLevel-content a:hover {
+  background-color: #303030;
+}
+
+.aliasesText {
+  position: absolute;
+  display: flex;
+  top: 90px;
+  left: 805px;
+}
+
+.aliasContainer {
+  position: absolute;
+  display: flex;
+  top: 120px;
+  left: 805px;
+  width: 280px;
+  height: 90px;
+}
+
+.aliasInput {
+  position: absolute;
+  display: flex;
+  margin-top: auto;
+  top: 130px;
+  left: 815px;
+  width: 260px;
+  height: 70px;
+}
+
+.keyWordContainer {
+  position: absolute;
+  display: flex;
+  top: 237.5px;
+  left: 805px;
+  width: 280px;
+  height: 92px;
+}
+
+.keyWordInput {
+  position: absolute;
+  display: flex;
+  top: 247.5px;
+  left: 815px;
+  width: 260px;
+  height: 70px;
+}
+
+.keyWordText {
+  position: absolute;
+  display: flex;
+  top: 212px;
+  left: 805px;
+}
+
+.saveButton {
+  position: absolute;
+  height: 37px;
+  width: 175px;
+  resize: none;
+  overflow: hidden;
+  position: absolute;
+  background-color: #525252;
+  border-radius: 7.5px;
+  outline: none;
+  white-space: pre-wrap;
+  bottom: 30px;
+  left: 1125px;
+  text-align: center;
+  align-items: center;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.saveButton.active {
+  font-family: "area-extended", sans-serif;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  background-color: #5f5f5f;
+  transition: all 0.3s ease;
+}
+
+.statusContainer {
+  position: fixed;
+  right: -100%;
+  z-index: 2;
+  top: 6%;
+  transition: all 1s ease;
+}
+.statusContainer.active {
+  position: fixed;
+  z-index: 2;
+  right: 2%;
+  top: 6%;
+  transition: all 1s ease;
+}
+
+.statusCheck {
+  position: absolute;
+  z-index: 1;
+  right: 29%;
+  top: 9%;
+  margin-top: 12.5px;
+  margin-right: 450px;
+  font-size: 35px;
+}
+
+.status {
+  display: grid;
+  position: absolute;
+  width: 500px;
+  height: 65px;
+  border-radius: 12px;
+  background-color: #11101d;
+  box-shadow: #9d9ba8 0px 0px 40px -20px;
+  right: 10%;
+  top: 6%;
+  text-align: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.addCommandButton {
+  position: relative;
+  left: 78%;
+  background-color: #121212;;
+  width: 200px;
+  height: 40px;
+  border-radius: 7.5px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.addCommandButton:hover {
+  background-color: #1d1d1d;
+  transition: all 0.3s ease;
+}
+
+.deleteCommand {
+  display: block;
+  position: absolute;
+  width: 17px;
+  height: 23px;
+  right: 8%;
+  text-align: center;
+  align-items: center;
+  top: 27%;
+  color: darkgray;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.deleteCommand:hover {
+  color: gray;
+  transition: all 0.2s ease;
+}

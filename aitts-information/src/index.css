@@ -1,0 +1,73 @@
+body {
+  background-color: #212121;
+  font-family: "area-extended", sans-serif;
+  font-weight: 400;
+}
+
+.titleContainer {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.aiTTSTitle {
+  font-weight: 700;
+  color: white;
+  margin-top: 70px;
+  font-size: 50px;
+}
+
+.aiTTSDescription {
+  font-weight: 400;
+  color: white;
+  font-size: 15px;
+  margin-top: -30px;
+}
+
+.firstQuestion {
+  display: flex;
+  margin-left: 25%;
+  margin-top: 100px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.question {
+  display: flex;
+  margin-left: 25%;
+  margin-top: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.answer {
+  display: flex;
+  line-height: 20px;
+  font-family: 'Tahome', sans-serif;
+  max-width: 50%;
+  margin-left: 25%;
+  margin-top: 30px;
+  color: rgb(238, 238, 238);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.lastAnswer {
+  display: flex;
+  line-height: 20px;
+  font-family: 'Tahome', sans-serif;
+  max-width: 50%;
+  margin-left: 25%;
+  margin-top: 30px;
+  color: rgb(238, 238, 238);
+  font-size: 18px;
+  font-weight: 400;
+  height: 300px;
+}
+
+.extraColor {
+  color: rgb(255, 187, 0);
+}

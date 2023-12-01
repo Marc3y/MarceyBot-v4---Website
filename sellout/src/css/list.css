@@ -1,0 +1,32 @@
+.timerList {
+    margin-top: 15vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 6vh;
+}
+
+.timerObject {
+    width: 110vh;
+    height: 6vh;
+}
+
+.timerObjectDefault {
+    background-color: rgb(102, 102, 102);
+    width: 110vh;
+    height: 6vh;
+    border-radius: 1vh;
+}
+
+.timerObjectSettings {
+    display: none;
+    margin-top: 1vh;
+    background-color: rgb(102, 102, 102);
+    border-radius: 1vh;
+    width: 110vh;
+    height: 15vh;
+}
+
+.timerObjectSettings.open {
+    display: block;
+}

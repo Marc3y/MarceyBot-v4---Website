@@ -1,0 +1,100 @@
+.addTabWindow {
+    position: absolute;
+    width: 80vh;
+    height: 50vh;
+    margin: 0 auto;
+    border-radius: 1vh;
+    background-color: rgb(92, 92, 92);
+}
+
+.centeredContainer {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shadow.enabled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+.shadow {
+    display: none;
+}
+
+.addTabWindowTitle {
+    font-size: 2.5vh;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+}
+
+.withChannelName {
+    margin-top: 8vh;
+}
+
+.channelNameDefault {
+    color: rgb(212, 212, 212);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2vh;
+}
+
+.channelNameInput {
+    width: 35vh;
+    height: 4vh;
+    color: black;
+    background-color: rgb(170, 170, 170);
+    border-radius: 1vh;
+    font-family: 'Fira Sans', sans-serif;
+    border: none;
+    font-size: 3vh;
+    outline: none;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    text-align: center;
+}
+
+.channelNameInput:focus {
+    border: 0.1px solid white;
+}
+
+.addTabButton {
+    margin: 0 auto;
+    margin-top: 12.5vh;
+    width: 37vh;
+    height: 5vh;
+    text-align: center;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 1vh;
+    font-size: 1.75vh;
+    background-color: rgb(80, 80, 80);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.addTabButton:hover {
+    background-color: rgb(110, 110, 110);
+    transition: all 0.2s ease;
+}
+
+.tabAddContainer {
+    display: none;
+}
+
+.tabAddContainer.enabled {
+    display: block;
+}
